@@ -194,5 +194,5 @@ plot_stress <- function(model,
             )
         }
     }
-    NULL  # suppress all possible return values
+    invisible(NULL)  # suppress all possible return values
 }

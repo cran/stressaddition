@@ -1,6 +1,15 @@
+# stressaddition 3.0.2
+
+* Fixed a bug where the plotting functions printed `NULL` to the console.
+* Changed maintainer e-mail address to ensure long-term maintainability.
+* Internal improvements related to package testing.
+
+
 # stressaddition 3.0.1
-* Add missing return values in documentation to comply with CRAN repository policy.
-* Add a link to the paper in the description file.
+
+* Added missing return values in documentation to comply with CRAN repository policy.
+* Added a link to the paper in the description file.
+
 
 # stressaddition 3.0.0
 
@@ -16,14 +25,16 @@
 * Fixed some errors in the documentation and improved the examples.
 
 ## New
-* Export function `log10_ticks()` for calculating tick mark labels and positions on a base 10 logarithmic axis.
-* Add example data set `multiple_stress` for use with `multi_tox()`.
+* Exported function `log10_ticks()` for calculating tick mark labels and positions on a base 10 logarithmic axis.
+* Added example data set `multiple_stress` for use with `multi_tox()`.
 * Various minor changes to prepare for CRAN submission.
+
 
 # stressaddition 2.7.0
 
 * Fixed some spelling mistakes.
 * `predict_mixture()` now also returns the various stresses.
+
 
 # stressaddition 2.6.0
 
@@ -33,45 +44,53 @@
     * `response_level` of 0 or 100 is now allowed. 0 returns the concentration 0 and 100 returns the concentration `Inf`. Previously this resulted in an error.
     * It is now possible to set the reference to a custom value, for example 100.
 
+
 # stressaddition 2.5.0
 
 * Fixed unintended behaviour in `plot_effect()` and `plot_stress()` where supplying an empty vector caused the four standard curves to show. Now setting `which` to an empty vector or `NULL` shows just the axes. The default value is NA.
 * Renamed the `mixture_effect` column in the `predict_mixture` output data frame to `effect`.
 * Remove the restriction that the concentration vectors in `predict_mixture()` must be the same length. The longer length must be a multiple of the shorter length because the shorter vector gets recycled to the longer length.
 
+
 # stressaddition 2.4.0
 
 * Improved `plot_effect()` and `plot_stress()`. You can now control whether the observed values (the points) should be plotted using the `which` argument.
 * Renamed `sys_tox_not_fitted` and `sys_tox_env_not_fitted` to `sys_tox_observed` and `sys_tox_env_observed` in the output of `ecxsys()`.
 
+
 # stressaddition 2.3.0
 
-* `predict_mixture()` accepts multiple values for the concentration of the second toxicant. Both concentration vectors must be the same length.
+* `predict_mixture()` now accepts multiple values for the concentration of the second toxicant. Both concentration vectors must be the same length.
 * `predict_mixture()` now returns a data frame with the concentrations and effects. Previously it was only a vector of effects.
 * `predict_mixture()` received a new argument "effect_max" which scales the returned effect values.
 * Renamed the arguments of `predict_mixture()` to use underscore letters a and b instad of 1 and 2. For example model_1 is now model_a.
 
+
 # stressaddition 2.2.1
 
-* Improve documentation of `predict_mixture()` and include example of symmetry.
+* Improved documentation of `predict_mixture()` and included example of symmetry.
+
 
 # stressaddition 2.2.0
 
-* `ec()` raises an error if the curve does not cross the desired response level.
-* `ecxsys()` gains a new argument `curves_concentration_max` which allows setting the maximum concentration of the predicted curves.
+* `ec()` now raises an error if the curve does not cross the desired response level.
+* `ecxsys()` gained a new argument `curves_concentration_max` which allows setting the maximum concentration of the predicted curves.
+
 
 # stressaddition 2.1.1
 
 * Restore the default behaviour of `plot_effect()` to also show `effect_tox` and `effect_tox_env`.
 
+
 # stressaddition 2.1.0
 
-* The functions `plot_effect()` and `plot_stress()` gain a `which` argument that controls which curves are plotted. Consequently, the `show_LL5_model` argument of `plot_effect()` was removed.
+* The functions `plot_effect()` and `plot_stress()` gained a `which` argument that controls which curves are plotted. Consequently, the `show_LL5_model` argument of `plot_effect()` was removed.
 * Added arguments `xlab` and `ylab` to `plot_stress`.
 * Added argument `main` to both plot functions.
 * Changed some colors of the stress curves so they better match with the colors of related effect curves.
 * Added `predict_mixture()` for the prediction of the effects of mixtures of two toxicants.
 * Fixed documentation of `ecxsys()` and `predict_ecxsys()`.
+
 
 # stressaddition 2.0.0
 

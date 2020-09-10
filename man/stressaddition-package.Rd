@@ -37,7 +37,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Sebastian Henz \email{sebastian.henz@ufz.de} (\href{https://orcid.org/0000-0001-8299-8852}{ORCID})
+\strong{Maintainer}: Sebastian Henz \email{bastihz.dev@posteo.de} (\href{https://orcid.org/0000-0001-8299-8852}{ORCID})
 
 Authors:
 \itemize{
