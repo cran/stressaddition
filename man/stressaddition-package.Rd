@@ -6,11 +6,12 @@
 \alias{stressaddition-package}
 \title{stressaddition: Modelling Tri-Phasic Concentration-Response Relationships}
 \description{
-The stress addition approach is an alternative to the traditional 
-    concentration addition or effect addition models. It allows the modelling 
-    of tri-phasic concentration-response relationships either as single toxicant 
-    experiments, in combination with an environmental stressor or as mixtures of 
-    two toxicants. See Liess et al. (2019) <doi:10.1038/s41598-019-51645-4>.
+The stress addition approach is an alternative to the traditional
+    concentration addition or effect addition models. It allows the modelling
+    of tri-phasic concentration-response relationships either as single toxicant
+    experiments, in combination with an environmental stressor or as mixtures of
+    two toxicants. See Liess et al. (2019) <doi:10.1038/s41598-019-51645-4>
+    and Liess et al. (2020) <doi:10.1186/s12302-020-00394-7>.
 }
 \details{
 This R package contains the definitions of the
@@ -26,8 +27,9 @@ This R package contains the definitions of the
   Henz, S. & Knillmann, S. Predicting low-concentration effects of
   pesticides. Sci Rep 9, 15248 (2019).}
 
-  Liess, M., Henz, S., Shahid, N., 2020. Modelling the synergistic effects of
-  toxicant mixtures. Manuscript submitted for publication.
+  \href{https://doi.org/10.1186/s12302-020-00394-7}{Liess, M., Henz, S. &
+  Shahid, N. Modeling the synergistic effects of
+  toxicant mixtures. Environ Sci Eur 32, 119 (2020).}
 }
 \seealso{
 Useful links:

@@ -26,14 +26,15 @@
 #'
 #' @name plot_ecxsys
 #'
-#' @param model The object returned from \code{\link{ecxsys}}.
-#' @param which A vector of names to plot. Allowed are the column names of the
-#'   \code{model$curves} data frame. There is also
-#'   \code{"survival_tox_observed"} and \code{"survival_tox_env_observed"} for
-#'   the observed survival and \code{"sys_tox_observed"} and
-#'   \code{"sys_tox_env_observed"} for the observed Sys. The default \code{NA}
-#'   only plots the most important curves. Use \code{which = "all"} to display
-#'   all curves. An empty vector or \code{NULL} creates just the axes.
+#' @param model The model object returned from \code{\link{ecxsys}}.
+#' @param which A vector of curve names to plot. Allowed are all values of
+#'   \code{names(model$curves)} except \code{"concentration"}. See the
+#'   \emph{Value} section of \code{\link{predict_ecxsys}} for descriptions of
+#'   these names. Additionally, you can use \code{"survival_tox_observed"} and
+#'   \code{"survival_tox_env_observed"} for the observed survival and
+#'   \code{"sys_tox_observed"} and \code{"sys_tox_env_observed"} for the
+#'   observed Sys. Use \code{"all"} to plot everything or \code{NA} to only draw
+#'   the axis and labels. Invalid names will be silently ignored.
 #'
 #' @param show_legend Should the plot include a legend? Defaults to \code{FALSE}
 #'   because it may cover some parts of the plot depending on the plot size and

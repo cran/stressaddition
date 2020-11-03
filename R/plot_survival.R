@@ -20,7 +20,14 @@
 #' @rdname plot_ecxsys
 #' @export
 plot_survival <- function(model,
-                          which = NA,
+                          which = c(
+                              "survival_tox",
+                              "survival_tox_sys",
+                              "survival_tox_observed",
+                              "survival_tox_env",
+                              "survival_tox_env_sys",
+                              "survival_tox_env_observed"
+                          ),
                           show_legend = FALSE,
                           xlab = "concentration",
                           ylab = "survival",
@@ -30,26 +37,15 @@ plot_survival <- function(model,
     curve_names <- names(model$curves)
     valid_names <- c(
         curve_names[startsWith(curve_names, "survival")],
-        "survival_tox_observed", "survival_tox_env_observed"  # observed points
+        "survival_tox_observed"
     )
-    if (length(which) == 1 && is.na(which)) {
-        which <- c("survival_tox", "survival_tox_sys", "survival_tox_observed")
-        if (model$with_env) {
-            which <- c(which, "survival_tox_env", "survival_tox_env_sys",
-                       "survival_tox_env_observed")
-        }
-    } else if ("all" %in% which) {
-        if (length(which) > 1) {
-            stop("'all' must not be combined with other curve names.")
-        }
+    if (model$with_env) {
+        valid_names <- c(valid_names, "survival_tox_env_observed")
+    }
+    if ("all" %in% which) {
         which <- valid_names
-    } else if (!model$with_env && any(grepl("env", which, fixed = TRUE))) {
-        warning("'which' contains names with 'env' but the model was built ",
-                "without environmental stress.")
-        which <- which[which %in% valid_names]
-    } else if (any(!which %in% valid_names)) {
-        warning("Argument 'which' contains invalid names.")
-        which <- which[which %in% valid_names]
+    } else {
+        which <- intersect(which, valid_names)
     }
 
     curves <- model$curves

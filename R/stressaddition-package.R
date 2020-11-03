@@ -39,8 +39,9 @@
 #'   Henz, S. & Knillmann, S. Predicting low-concentration effects of
 #'   pesticides. Sci Rep 9, 15248 (2019).}
 #'
-#'   Liess, M., Henz, S., Shahid, N., 2020. Modelling the synergistic effects of
-#'   toxicant mixtures. Manuscript submitted for publication.
+#'   \href{https://doi.org/10.1186/s12302-020-00394-7}{Liess, M., Henz, S. &
+#'   Shahid, N. Modeling the synergistic effects of
+#'   toxicant mixtures. Environ Sci Eur 32, 119 (2020).}
 #'
 #' @import stats
 #' @import graphics

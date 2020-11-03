@@ -86,8 +86,9 @@
 #' mt[1:3]  # The concentrations and survival of the 4 mixtures.
 #'
 #'
-#' @references Liess, M., Henz, S., Shahid, N., 2020. Modelling the synergistic
-#'   effects of toxicant mixtures. Manuscript submitted for publication.
+#' @references \href{https://doi.org/10.1186/s12302-020-00394-7}{Liess, M.,
+#'   Henz, S. & Shahid, N. Modeling the synergistic effects of
+#'   toxicant mixtures. Environ Sci Eur 32, 119 (2020).}
 #'
 #' @export
 multi_tox <- function(model_a,

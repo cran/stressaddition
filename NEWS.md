@@ -1,3 +1,14 @@
+# stressaddition 3.1.0
+
+* Improved the documentation of the `which` argument in `plot_survival()` and `plot_stress()`.
+* Changed the default value of the `which` argument in the plot functions. Now it contains the proper default curve names. If it is `NA` only the axes and labels will get drawn.
+
+
+# stressaddition 3.0.3
+
+* Added references to the journal article about the Multi-Tox model which was recently published.
+
+
 # stressaddition 3.0.2
 
 * Fixed a bug where the plotting functions printed `NULL` to the console.

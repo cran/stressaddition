@@ -41,6 +41,7 @@
 #'     of Pesticide Mixtures on Daphnia magna. Environ. Sci. Technol. 53,
 #'     12586–12593.}
 #'
-#'   Liess, M., Henz, S., Shahid, N., 2020. Modelling the synergistic effects
-#'     of toxicant mixtures. Manuscript submitted for publication.
+#'   \href{https://doi.org/10.1186/s12302-020-00394-7}{Liess, M., Henz, S. &
+#'   Shahid, N. Modeling the synergistic effects of
+#'   toxicant mixtures. Environ Sci Eur 32, 119 (2020).}
 "multiple_stress"

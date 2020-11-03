@@ -20,7 +20,12 @@
 #' @rdname plot_ecxsys
 #' @export
 plot_stress <- function(model,
-                        which = NA,
+                        which = c(
+                            "sys_tox",
+                            "sys_tox_observed",
+                            "sys_tox_env",
+                            "sys_tox_env_observed"
+                        ),
                         show_legend = FALSE,
                         xlab = "concentration",
                         ylab = "stress",
@@ -30,25 +35,15 @@ plot_stress <- function(model,
     curve_names <- names(model$curves)
     valid_names <- c(
         curve_names[startsWith(curve_names, "stress") | startsWith(curve_names, "sys")],
-        "sys_tox_observed", "sys_tox_env_observed"  # the observed points
+        "sys_tox_observed"
     )
-    if (length(which) == 1 && is.na(which)) {
-        which <- c("sys_tox", "sys_tox_observed")
-        if (model$with_env) {
-            which <- c(which, "sys_tox_env", "sys_tox_env_observed")
-        }
-    } else if ("all" %in% which) {
-        if (length(which) > 1) {
-            stop("'all' must not be combined with other curve names.")
-        }
+    if (model$with_env) {
+        valid_names <- c(valid_names, "sys_tox_env_observed")
+    }
+    if ("all" %in% which) {
         which <- valid_names
-    } else if (!model$with_env && any(grepl("env", which, fixed = TRUE))) {
-        warning("'which' contains names with 'env' but the model was built ",
-                "without environmental stress.")
-        which <- which[which %in% valid_names]
-    } else if (any(!which %in% valid_names)) {
-        warning("Argument 'which' contains invalid names.")
-        which <- which[which %in% valid_names]
+    } else {
+        which <- intersect(which, valid_names)
     }
 
     curves <- model$curves
